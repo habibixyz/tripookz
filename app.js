@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contractHash = document.querySelector(".contract-hash");
   if (contractHash) {
     contractHash.addEventListener("click", () => {
-      navigator.clipboard.writeText("0x59395cd693607cd7fd782f6884968a122fb24a71");
+      navigator.clipboard.writeText("0x450d9f4042177b212886f099622c5ace7a42a1e3");
       showNotification("Address Copied", "Contract Address saved to clipboard!");
     });
   }
