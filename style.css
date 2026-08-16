@@ -1059,6 +1059,142 @@ h1, h2, h3, h4 {
   100% { transform: skew(0deg) scale(1); }
 }
 
+/* 11.5. 90'S VIBES & ART SECTION */
+.vibes-section {
+  background-color: var(--bg-dark);
+  border-top: var(--comic-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.vibes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.vibe-card {
+  background: var(--card-bg-glass);
+  border: var(--comic-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-neo);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.vibe-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Neon glow hover animations based on card glow class */
+.vibe-card.glow-green:hover {
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.6), var(--shadow-neo);
+  border-color: rgba(57, 255, 20, 1);
+}
+
+.vibe-card.glow-blue:hover {
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.6), var(--shadow-neo);
+  border-color: rgba(0, 191, 255, 1);
+}
+
+.vibe-card.glow-purple:hover {
+  box-shadow: 0 0 25px rgba(186, 85, 211, 0.6), var(--shadow-neo);
+  border-color: rgba(186, 85, 211, 1);
+}
+
+.vibe-img-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  overflow: hidden;
+  border-bottom: var(--comic-border);
+}
+
+.vibe-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.vibe-card:hover .vibe-img {
+  transform: scale(1.05);
+}
+
+.vibe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 9, 5, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.vibe-card:hover .vibe-overlay {
+  opacity: 1;
+}
+
+.vibe-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.vibe-info h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.vibe-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1.5px solid var(--text-dark);
+  margin-bottom: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.badge-green {
+  background-color: #39ff14;
+  color: var(--text-dark);
+}
+
+.badge-blue {
+  background-color: #00bff5;
+  color: var(--text-dark);
+}
+
+.badge-purple {
+  background-color: #ba55d3;
+  color: var(--text-light);
+}
+
+.vibe-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #a0a0a0;
+  margin: 0;
+}
+
 /* 12. RESPONSIVE DESIGN */
 @media (max-width: 992px) {
   .hero-section {
@@ -1116,6 +1252,11 @@ h1, h2, h3, h4 {
   .modal-right {
     overflow-y: visible;
   }
+
+  .vibes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1148,5 +1289,11 @@ h1, h2, h3, h4 {
 
   .modal-actions {
     flex-direction: column;
+  }
+
+  .vibes-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 2rem auto 0 auto;
   }
 }
