@@ -1,5 +1,5 @@
 /**
- * Tripookz Brand Portal - Application Controller
+ * Tripoozkk Brand Portal - Application Controller
  * Handles the archetype modal showcase, notification alerts, and
  * a luxury street-vibe Web Audio synth engine with diamond-shine effects.
  */
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tier: "Wet Brain",
       badge: "badge-rare",
       quote: "Wet Brain Club.",
-      desc: "The original sewage-born zombie slime mutant. A catalyst of the entire Tripookz universe, blending olive greens, moss walls, and golden accessories in a beautiful grunge package. Features the famous WET BRAIN neck tattoo.",
+      desc: "The original sewage-born zombie slime mutant. A catalyst of the entire Tripoozkk universe, blending olive greens, moss walls, and golden accessories in a beautiful grunge package. Features the famous WET BRAIN neck tattoo.",
       traits: {
         skin: "Zombified Beige & Green Drips",
         headwear: "Messy Black Grunge Spikes",
@@ -275,13 +275,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Direct image download link
     downloadLink.href = data.image;
-    downloadLink.download = `tripookz_${archetypeKey}.jpg`;
+    downloadLink.download = `tripoozkk_${archetypeKey}.jpg`;
 
     // Real OpenSea link
-    openseaLink.href = "https://opensea.io/collection/tripookz";
+    openseaLink.href = "https://opensea.io/collection/tripoozkk";
     openseaLink.onclick = () => {
       playShimmerChime();
-      showNotification("Sewer Vault", "Opening the official Tripookz OpenSea collection...");
+      showNotification("Sewer Vault", "Opening the official Tripoozkk OpenSea collection...");
     };
 
     // Populating traits
